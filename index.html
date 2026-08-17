@@ -71,7 +71,13 @@
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
     transition:background-color .2s ease, color .2s ease;
+    cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="4" x2="16" y2="12" stroke="%2343D97B" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="20" x2="16" y2="28" stroke="%2343D97B" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="16" x2="12" y2="16" stroke="%2343D97B" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="16" x2="28" y2="16" stroke="%2343D97B" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="1.5" fill="%2343D97B"/></svg>') 16 16, auto;
   }
+
+  html[data-theme="light"] body{
+    cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="4" x2="16" y2="12" stroke="%230F7A3D" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="20" x2="16" y2="28" stroke="%230F7A3D" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="16" x2="12" y2="16" stroke="%230F7A3D" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="16" x2="28" y2="16" stroke="%230F7A3D" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="1.5" fill="%230F7A3D"/></svg>') 16 16, auto;
+  }
+
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
     *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
@@ -86,6 +92,7 @@
     transition:background-image .2s ease;
     -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 0%, transparent 75%);
     mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 0%, transparent 75%);
+    opacity:0.4;
   }
 
   a{ color:inherit; text-decoration:none; }
@@ -205,7 +212,7 @@
   @media (min-width:760px){ .service-grid{ grid-template-columns:1fr 1fr; } }
   .service-card{ background:var(--panel); padding:32px; }
   .service-card .code-row{ display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
-  .service-card .sheet-code{ font-family:var(--font-mono); font-size:0.78rem; color:var(--accent); border:1px solid var(--accent-dim); background:var(--accent-dim-2); padding:4px 9px; border-radius:2px; letter-spacing:0.03em; }
+  .service-card .sheet-code{ font-family:var(--font-mono); font-size:0.78rem; color:var(--accent); border:1px solid var(--accent-dim); background:var(--accent-dim-2); padding:4px 9px; border-radius:2px; }
   .service-card .idx{ font-family:var(--font-mono); font-size:0.72rem; color:var(--text-faint); }
   .service-card h3{ font-size:1.18rem; margin-bottom:16px; }
   .service-card ul{ display:flex; flex-direction:column; gap:10px; }
@@ -264,7 +271,7 @@
 <header>
   <div class="container nav">
     <a href="#top" class="brand" aria-label="ARCHENGEL home">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" stroke="var(--accent)" stroke-width="1.6"/><path d="M2 16 L10 6 L16 13 L22 8" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" stroke="var(--accent)" stroke-width="1.6"/><path d="M2 16 L10 6 L16 13 L22 8" stroke="var(--accent)" stroke-width="1.6"/></svg>
       ARCHENGEL
     </a>
     <nav class="nav-links">
@@ -275,7 +282,7 @@
     <div class="nav-right">
       <div class="theme-switch" role="group" aria-label="Color theme">
         <button type="button" class="theme-btn" id="themeLight" aria-label="Light mode" aria-pressed="false">
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 1.5v2M10 16.5v2M18.5 10h-2M3.5 10h-2M15.6 4.4l-1.4 1.4M5.8 14.2l-1.4 1.4M15.6 15.6l-1.4-1.4M5.8 5.8L4.4 4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 1.5v2M10 16.5v2M18.5 10h-2M3.5 10h-2M15.6 4.4l-1.4-1.4M6.4 15.6l-1.4-1.4M15.6 15.6l-1.4 1.4M6.4 4.4l-1.4 1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </button>
         <button type="button" class="theme-btn" id="themeDark" aria-label="Dark mode" aria-pressed="true">
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M17 11.4A7.5 7.5 0 0 1 8.6 3 7.5 7.5 0 1 0 17 11.4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
@@ -305,7 +312,7 @@
         <span class="status-badge"><span class="dot" aria-hidden="true"></span> Available for new projects</span>
         <p class="hero-eyebrow"><b>{ <span class="b">me</span>: architect, <span class="b">myself</span>: structural&nbsp;engineer, <span class="b">i</span>: software&nbsp;engineer }</b></p>
         <h1>Design it. Engineer it. <em>Ship</em> it.</h1>
-        <p class="lead"><b><em>ARCHENGEL</em></b> is an independent practice spanning software engineering, architectural design, and structural engineering — <b><em>1 person : 3 domains of expertise</em></b> — built for AEC teams who need those disciplines to actually agree.</p>
+        <p class="lead"><b><em>ARCHENGEL</em></b> is an independent practice spanning software engineering, architectural design, and structural engineering — <b><em>1 person : 3 domains of expertise</em></b></p>
         <div class="hero-actions">
           <a href="mailto:kelly@archengel.dev" class="btn btn-primary">Email ARCHENGEL →</a>
           <a href="tel:+18566932685" class="btn btn-ghost">Call · 856-693-2685</a>
@@ -403,7 +410,7 @@
       <div class="section-head">
         <span class="eyebrow">Scope of work</span>
         <h2>Three disciplines. <em>One point of contact.</em></h2>
-        <p>Most AEC problems don't respect the boundary between architecture, structural engineering, and software — so this practice doesn't either. Hire ARCHENGEL for one discipline, or all three on the same project.</p>
+        <p>Most AEC problems don't respect the boundary between architecture, structural engineering, and software — so this practice doesn't either. Hire ARCHENGEL for one discipline, or all three.</p>
       </div>
 
       <div class="service-grid">
@@ -456,7 +463,7 @@
 
       <div class="stack-wrap">
         <div class="stack-copy">
-          <p style="color:var(--text-dim); margin-top:0; max-width:44ch;">Same rigor, different file formats. This is the actual toolchain — from the Revit API to React — used to move a project from sketch to shipped.</p>
+          <p style="color:var(--text-dim); margin-top:0; max-width:44ch;">Same rigor, different file formats. This is the actual toolchain — from the Revit API to React — used to move a project from concept to completion.</p>
           <div class="tag-summary">
             <span class="mini-tag">7 languages</span>
             <span class="mini-tag">8 frameworks</span>
@@ -470,16 +477,16 @@
             <span class="terminal-file">stack.config.ts</span>
           </div>
           <div class="terminal-body"><span class="p">{</span>
-  <span class="k">"languages"</span><span class="p">:</span> [<span class="s">"TypeScript"</span><span class="p">,</span> <span class="s">"JavaScript"</span><span class="p">,</span> <span class="s">"Python"</span><span class="p">,</span> <span class="s">"C#"</span><span class="p">,</span> <span class="s">"Git Bash"</span><span class="p">,</span> <span class="s">"HTML"</span><span class="p">,</span> <span class="s">"CSS"</span>]<span class="p">,</span>
+  <span class="k">"languages"</span><span class="p">:</span> [<span class="s">"TypeScript"</span><span class="p">,</span> <span class="s">"JavaScript"</span><span class="p">,</span> <span class="s">"Python"</span><span class="p">,</span> <span class="s">"C#"</span><span class="p">,</span> <span class="s">"Go"</span><span class="p">,</span> <span class="s">"SQL"</span><span class="p">,</span> <span class="s">"JSON"</span>]<span class="p">,</span>
   <span class="k">"versionControl"</span><span class="p">:</span> [<span class="s">"GitHub"</span>]<span class="p">,</span>
   <span class="k">"frameworks"</span><span class="p">:</span> [
     <span class="s">"Express.js"</span><span class="p">,</span> <span class="s">"Node.js"</span><span class="p">,</span> <span class="s">"React"</span><span class="p">,</span> <span class="s">"React Three Fiber"</span><span class="p">,</span>
-    <span class="s">"Next.js"</span><span class="p">,</span> <span class="s">"Three.js"</span><span class="p">,</span> <span class="s">"D3.js"</span><span class="p">,</span> <span class="s">"D2.js"</span><span class="p">,</span> <span class="s">"IronPython"</span>
+    <span class="s">"Next.js"</span><span class="p">,</span> <span class="s">"Three.js"</span><span class="p">,</span> <span class="s">"D3.js"</span><span class="p">,</span> <span class="s">"D2.js"</span>
   ]<span class="p">,</span>
   <span class="k">"aecSoftware"</span><span class="p">:</span> [
-    <span class="s">"Revit"</span><span class="p">,</span> <span class="s">"Revit API"</span><span class="p">,</span> <span class="s">"Robot Structural Analysis"</span><span class="p">,</span> <span class="s">"AutoCAD"</span><span class="p">,</span>
-    <span class="s">"Maya"</span><span class="p">,</span> <span class="s">"Inventor"</span><span class="p">,</span> <span class="s">"Rhino3D"</span><span class="p">,</span> <span class="s">"Grasshopper"</span><span class="p">,</span> <span class="s">"Rhino.Inside"</span><span class="p">,</span>
-    <span class="s">"RhinoScript"</span><span class="p">,</span> <span class="s">"SAP2000"</span><span class="p">,</span> <span class="s">"RISA"</span><span class="p">,</span> <span class="s">"ENERCALC"</span><span class="p">,</span> <span class="s">"WOODWORKS"</span><span class="p">,</span>
+    <span class="s">"Revit"</span><span class="p">,</span> <span class="s">"Revit API"</span><span class="p">,</span> <span class="s">"Robot Structural Analysis"</span><span class="p">,</span> <span class="s">"Navisworks"</span><span class="p">,</span>
+    <span class="s">"Maya"</span><span class="p">,</span> <span class="s">"Inventor"</span><span class="p">,</span> <span class="s">"Rhino3D"</span><span class="p">,</span> <span class="s">"Grasshopper"</span><span class="p">,</span>
+    <span class="s">"RhinoScript"</span><span class="p">,</span> <span class="s">"SAP2000"</span><span class="p">,</span> <span class="s">"RISA"</span><span class="p">,</span> <span class="s">"ENERCALC"</span><span class="p">,</span>
     <span class="s">"RGS Cold-Formed-Steel Design"</span>
   ]
 <span class="p">}</span><span class="cursor" aria-hidden="true"></span></div>
@@ -540,6 +547,12 @@
     document.documentElement.setAttribute('data-theme', mode);
     themeLightBtn.setAttribute('aria-pressed', mode === 'light' ? 'true' : 'false');
     themeDarkBtn.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
+    updateCursor(mode);
+  }
+  function updateCursor(mode){
+    var color = mode === 'light' ? '%230F7A3D' : '%2343D97B';
+    var cursorSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="4" x2="16" y2="12" stroke="' + color + '" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="20" x2="16" y2="28" stroke="' + color + '" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="16" x2="12" y2="16" stroke="' + color + '" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="16" x2="28" y2="16" stroke="' + color + '" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="1.5" fill="' + color + '"/></svg>';
+    document.body.style.cursor = 'url("data:image/svg+xml;utf8,' + cursorSvg + '") 16 16, auto';
   }
   setTheme(document.documentElement.getAttribute('data-theme') || 'dark');
   themeLightBtn.addEventListener('click', function(){ setTheme('light'); });
